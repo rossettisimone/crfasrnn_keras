@@ -29,7 +29,7 @@ endif
 .PHONY: all clean
 
 high_dim_filter.so: high_dim_filter.cc modified_permutohedral.cc
-	$(CC) -std=c++11 -shared high_dim_filter.cc modified_permutohedral.cc -o high_dim_filter.so -fPIC $(TF_CFLAGS) $(MACFLAGS) $(TF_LFLAGS) -O2
+	$(CC) -std=c++14 -shared high_dim_filter.cc modified_permutohedral.cc -o high_dim_filter.so -fPIC $(TF_CFLAGS) $(MACFLAGS) $(TF_LFLAGS) -O2
 
 clean:
 	$(RM) high_dim_filter.so
